@@ -1,0 +1,203 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.1906401717212245 0.9733258869967772 0.12764420326845483 5.078060829925293
+  position -1.6272532921434693 0.5174186931765887 1.0669013472344862
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+}
+Solid {
+  translation 0 0.2 0
+  children [
+    DEF Cubo Group {
+      children [
+        DEF Rod Shape {
+          appearance Appearance {
+            material Material {
+              emissiveColor 1 0 0
+              shininess 0.8
+            }
+          }
+          geometry Cylinder {
+            height 0.3
+            radius 0.02
+          }
+        }
+        Transform {
+          translation 0.3 0 0
+          children [
+            USE Rod
+          ]
+        }
+        Transform {
+          translation 0 0 0.3
+          children [
+            USE Rod
+          ]
+        }
+        Transform {
+          translation 0.3 0 0.3
+          children [
+            USE Rod
+          ]
+        }
+        DEF UPR Transform {
+          translation 0.15 0.15 0
+          rotation 0 0 1 1.5707963220000003
+          children [
+            USE Rod
+          ]
+        }
+        DEF DOR Transform {
+          translation 0.15 -0.15 0
+          rotation 0 0 1 1.5707963220000003
+          children [
+            USE Rod
+          ]
+        }
+        DEF UPR Transform {
+          translation 0.15 0.15 0.3
+          rotation 0.5772204536839303 0.5774151673822892 -0.5774151646136432 2.094589832445441
+          children [
+            USE Rod
+          ]
+        }
+        DEF DOR Transform {
+          translation 0.15 -0.15 0.3
+          rotation 0.5772204536839303 0.5774151673822892 -0.5774151646136432 2.094589832445441
+          children [
+            USE Rod
+          ]
+        }
+        DEF UPR Transform {
+          translation 0.3 0.15000000000000002 0.15
+          rotation 0.9999999715617354 0.0001686388826467602 -0.00016863408775026135 1.5707963552339703
+          children [
+            USE Rod
+          ]
+        }
+        DEF DOR Transform {
+          translation 0.3 -0.15 0.15
+          rotation 0.9999999715617354 0.0001686388826467602 -0.00016863408775026135 1.5707963552339703
+          children [
+            USE Rod
+          ]
+        }
+        DEF UPR Transform {
+          translation 0 0.15 0.15
+          rotation 0.9999999715617354 0.0001686388826467602 -0.00016863408775026135 1.5707963552339703
+          children [
+            USE Rod
+          ]
+        }
+        DEF UPR Transform {
+          translation 0 -0.15 0.15
+          rotation 0.9999999715617354 0.0001686388826467602 -0.00016863408775026135 1.5707963552339703
+          children [
+            USE Rod
+          ]
+        }
+        DEF UP Transform {
+          translation 0 0.15 0
+          children [
+            DEF Sphere Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.7999999999999999 0.8 0.8
+                  emissiveColor 0 0 1
+                  shininess 0.8
+                }
+              }
+              geometry Sphere {
+                radius 0.05
+              }
+            }
+          ]
+        }
+        DEF UP Transform {
+          translation 0.3 0.15 0
+          children [
+            DEF Sphere Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.7999999999999999 0.8 0.8
+                  emissiveColor 0 0 1
+                  shininess 0.8
+                }
+              }
+              geometry Sphere {
+                radius 0.05
+              }
+            }
+          ]
+        }
+        DEF UP Transform {
+          translation 0.3 0.15 0.3
+          children [
+            DEF Sphere Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.7999999999999999 0.8 0.8
+                  emissiveColor 0 0 1
+                  shininess 0.8
+                }
+              }
+              geometry Sphere {
+                radius 0.05
+              }
+            }
+          ]
+        }
+        DEF UP Transform {
+          translation 0 0.15 0.3
+          children [
+            DEF Sphere Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.7999999999999999 0.8 0.8
+                  emissiveColor 0 0 1
+                  shininess 0.8
+                }
+              }
+              geometry Sphere {
+                radius 0.05
+              }
+            }
+          ]
+        }
+        DEF Down Transform {
+          translation 0 -0.15 0
+          children [
+            USE Sphere
+          ]
+        }
+        DEF Down Transform {
+          translation 0.3 -0.15 0
+          children [
+            USE Sphere
+          ]
+        }
+        DEF Down Transform {
+          translation 0.3 -0.15 0.3
+          children [
+            USE Sphere
+          ]
+        }
+        DEF Down Transform {
+          translation 0 -0.15 0.3
+          children [
+            USE Sphere
+          ]
+        }
+      ]
+    }
+  ]
+  boundingObject USE Cubo
+  physics Physics {
+  }
+}
